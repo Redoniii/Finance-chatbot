@@ -1,8 +1,25 @@
 import os
+import re
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 DATA_DIR = "data"
+
+def clean_text(text):
+    lines = [line.strip() for line in text.split("\n") if line.strip()]
+    cleaned_lines = []
+
+    for line in lines:
+        if re.match(r'^(page\s*\d+(\s*of\s*\d+)?)$', line, re.I):
+            continue
+        if re.match(r'^\d+\s*/\s*\d+$', line):
+            continue
+        if len(line) < 5:
+            continue
+
+        cleaned_lines.append(line)
+
+    return "\n".join(cleaned_lines)
 
 def load_and_chunk_documents():
     documents = []
@@ -15,6 +32,7 @@ def load_and_chunk_documents():
             pages = loader.load()
 
             for p in pages:
+                p.page_content = clean_text(p.page_content)
                 p.metadata["source"] = filename
 
             documents.extend(pages)
