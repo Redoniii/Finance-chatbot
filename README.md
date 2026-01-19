@@ -54,6 +54,7 @@ Edit `generate.py` to adjust:
 - `SIMILARITY_THRESHOLD`: Relevance cutoff (default: 0.8)
 - `max_length`: Maximum answer length (default: 300)
 - `temperature`: Generation randomness (default: 0.7)
+- `MODEL_NAME` : I used "declare-lab/flan-alpaca-base" but you can use stronger models from declare-lab like "declare‑lab/flan‑alpaca‑large", declare‑lab/flan‑alpaca‑xl and declare‑lab/flan‑alpaca‑xxl depending on the hardware you got.
 
 ## Performance Notes
 
