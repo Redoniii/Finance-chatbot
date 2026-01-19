@@ -59,3 +59,17 @@ Edit `generate.py` to adjust:
 
 - For GPU: Change `device=-1` to `device=0` in `generate.py`
 
+## Screenshots
+
+![Chatbot Interface](./images/Screenshot_2.png)
+
+![Chatbot Interface](./images/Screenshot_4.png)
+
+![Chatbot Interface](./images/Screenshot_5.png)
+
+![Chatbot Interface](./images/Screenshot_6.png)
+
+**Note:** You can also find the images in the /images folder
+
+## License
+
