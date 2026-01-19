@@ -48,6 +48,15 @@ python rag/index.py
 streamlit run app.py
 ```
 
+### Questions to test it
+**1:** Explain Finance in 1 sentence.
+**2:** What is IMF?
+**3:** What is blended Finance?
+**4:** Who is Albin Kurti?
+**5:** What is the two-stage DDM?
+**6:** What is Program trading?
+**7:** What is Income Statement?
+
 ### Configuration
 
 Edit `generate.py` to adjust:
